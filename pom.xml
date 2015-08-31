@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>hu.bme.mit.trainbenchmark.ttc</groupId>
 	<artifactId>hu.bme.mit.trainbenchmark.ttc</artifactId>
@@ -24,13 +22,15 @@
 			</activation>
 			<modules>
 				<module>hu.bme.mit.trainbenchmark.ttc.benchmark</module>
-				<module>hu.bme.mit.trainbenchmark.ttc.benchmark.atl</module>
-				<module>hu.bme.mit.trainbenchmark.ttc.benchmark.emfincquery</module>
-				<module>hu.bme.mit.trainbenchmark.ttc.benchmark.emfincquery.patterns</module>
-				<module>hu.bme.mit.trainbenchmark.ttc.benchmark.funnyqtglue</module>
+				<!-- <module>hu.bme.mit.trainbenchmark.ttc.benchmark.atl</module> -->
+				<!-- <module>hu.bme.mit.trainbenchmark.ttc.benchmark.emfincquery</module>  -->
+				<!-- <module>hu.bme.mit.trainbenchmark.ttc.benchmark.emfincquery.patterns</module>  -->
+				<!-- <module>hu.bme.mit.trainbenchmark.ttc.benchmark.funnyqtglue</module> -->
 				<module>hu.bme.mit.trainbenchmark.ttc.benchmark.java</module>
-				<module>hu.bme.mit.trainbenchmark.ttc.benchmark.sigma</module>
-				<module>hu.bme.mit.trainbenchmark.ttc.benchmark.viatra</module>
+				<module>hu.bme.mit.trainbenchmark.ttc.benchmark.incevl</module>
+				<module>hu.bme.mit.trainbenchmark.ttc.benchmark.batchevl</module>
+				<!-- <module>hu.bme.mit.trainbenchmark.ttc.benchmark.sigma</module> -->
+				<!-- <module>hu.bme.mit.trainbenchmark.ttc.benchmark.viatra</module> -->
 				<module>hu.bme.mit.trainbenchmark.ttc.emf</module>
 				<module>hu.bme.mit.trainbenchmark.ttc.emf.model</module>
 				<module>hu.bme.mit.trainbenchmark.ttc.generator</module>
@@ -103,7 +103,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
