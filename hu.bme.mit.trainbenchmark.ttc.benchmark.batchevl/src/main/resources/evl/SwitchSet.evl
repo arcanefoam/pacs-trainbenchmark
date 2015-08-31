@@ -1,0 +1,32 @@
+context Route {
+    constraint SwitchSet {
+        check {
+            if (self.entry.isUndefined() or self.entry.signal <> Signal#GO) {
+                return true;
+            }
+            
+            var matches = new Sequence;
+            
+            for (swp : SwitchPosition in self.follows) {
+                var invalids = swp.`switch`.select(sw | sw.currentPosition <> swp.position);  
+                if (not invalids.isEmpty()) {
+                    for (i : Switch in invalids) {
+                        var t = new Map;
+                        t.put("semaphore", self.entry);
+                        t.put("route", self);
+                        t.put("switchPosition", swp);
+                        t.put("switch", i);
+                        matches.add(t);
+                    }
+                } 
+            }
+            
+            if (matches.isEmpty()) {
+                return true;
+            }
+            
+            extras.put("matches", matches);
+            return false;       
+        }
+    }
+}

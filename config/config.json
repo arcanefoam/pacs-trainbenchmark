@@ -1,23 +1,26 @@
 {
-  "MinSize": 1,
-  "MaxSize": 2,
+  "MinSize": 512,
+  "MaxSize": 1024,
   "Queries": [
-    "PosLength"
+    "SwitchSet"
   ],
   "_TempQueriesComment": "The _TempQueries field is not used by the framework.",
   "_TempQueries": [
     "RouteSensor",
     "SemaphoreNeighbor",
-    "SwitchSensor",
     "SwitchSet"
   ],
   "Tools": [
-    "hu.bme.mit.trainbenchmark.ttc.benchmark.atl",
-    "hu.bme.mit.trainbenchmark.ttc.benchmark.emfincquery",
-    "hu.bme.mit.trainbenchmark.ttc.benchmark.funnyqtglue",
-    "hu.bme.mit.trainbenchmark.ttc.benchmark.java",
-    "hu.bme.mit.trainbenchmark.ttc.benchmark.sigma",
-    "hu.bme.mit.trainbenchmark.ttc.benchmark.viatra"
+    "hu.bme.mit.trainbenchmark.ttc.benchmark.incevl",
+    "hu.bme.mit.trainbenchmark.ttc.benchmark.batchevl",
+    "hu.bme.mit.trainbenchmark.ttc.benchmark.emfincquery"
+  ],
+  "_TempTools": [
+      "hu.bme.mit.trainbenchmark.ttc.benchmark.incevl",
+        "hu.bme.mit.trainbenchmark.ttc.benchmark.atl",
+        "hu.bme.mit.trainbenchmark.ttc.benchmark.emfincquery",
+        "hu.bme.mit.trainbenchmark.ttc.benchmark.java",
+        "hu.bme.mit.trainbenchmark.ttc.benchmark.sigma"  
   ],
   "ChangeSets":[
     "fixed"
@@ -29,8 +32,8 @@
   "Runs": 5,
   "IterationCount": 10,
   "JVM": {
-    "vmargs": ["-Xmx512m", "-Dorg.eclipse.emf.common.util.ReferenceClearingQueue=false"]
+    "vmargs": ["-Xmx2048m", "-Xss16m", "-Dorg.eclipse.emf.common.util.ReferenceClearingQueue=false"]
   },
   "OptionalArguments": [[]],
-  "Timeout": 600
+  "Timeout": 1800
 }

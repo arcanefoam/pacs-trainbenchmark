@@ -18,7 +18,39 @@
         "repair",
         "recheck"
       ]
+    },
+    {
+      "Name": "revalidation",
+      "Phases": [
+        "repair",
+        "recheck"
+      ]
+    },
+    {
+      "Name": "check",
+      "Phases": [
+        "check"
+      ]
+    },
+        {
+      "Name": "read",
+      "Phases": [
+        "read"
+      ]
+    },
+    {
+      "Name": "repair",
+      "Phases": [
+        "repair"
+      ]
+    },
+    {
+      "Name": "recheck",
+      "Phases": [
+        "recheck"
+      ]
     }
   ],
+
   "Extension": ["png"]
 }

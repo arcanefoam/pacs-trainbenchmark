@@ -1,0 +1,6 @@
+context Segment {
+    
+    constraint PosLength {
+        check: self.length > 0
+    }
+}

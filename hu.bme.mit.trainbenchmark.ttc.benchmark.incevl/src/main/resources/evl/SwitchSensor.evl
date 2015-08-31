@@ -1,0 +1,5 @@
+context Switch {
+    constraint SwitchSensor {
+	   check: self.sensor.isDefined()
+    }
+}
